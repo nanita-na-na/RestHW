@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "1887bb08-c10e-4685-bc60-bdca0b886714",
+		"name": "Rest Principles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24271507"
+	},
+	"item": [
+		{
+			"name": "Create shop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Butic\",\r\n        \"city\": \"Kharkiv\",\r\n        \"street\": \"Sumska\",\r\n        \"countOfEmployees\": 8,\r\n        \"haveSite\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shops/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shops",
+						"shop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete shop",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/shops/shop?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shops",
+						"shop"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all shops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/shops/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shops",
+						"shop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update shop",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"Varus\",\r\n    \"city\": \"Kamenskoe\",\r\n    \"street\": \"Metalurgov\",\r\n    \"countOfEmployees\": 48,\r\n    \"haveSite\": true\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shops/shop/edit/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shops",
+						"shop",
+						"edit",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get shop by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/shops/shop/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shops",
+						"shop",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
