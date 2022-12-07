@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/api/shops/")
@@ -35,7 +34,7 @@ public class ShopController {
     }
 
     @GetMapping(value = "/shop/{id}")
-    public Optional<Shop> getById(@PathVariable Long id) {
+    public Shop getById(@PathVariable Long id) {
         return shopService.getById(id);
     }
 

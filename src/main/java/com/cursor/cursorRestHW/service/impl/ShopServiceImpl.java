@@ -38,11 +38,11 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public Optional<Shop> getById(Long id) {
+    public Shop getById(Long id) {
         if (!shopRepository.existsById(id)) {
             throw new ShopNotFoundException();
         }
-        return shopRepository.findById(id);
+        return shopRepository.findById(id).get();
     }
 
     @Override

@@ -13,7 +13,7 @@ public interface ShopService {
 
     List<Shop> getAll();
 
-    Optional<Shop> getById(Long id);
+    Shop getById(Long id);
 
     Shop update(Long id, Shop shop);
 }
