@@ -24,7 +24,7 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public void delete(Long id) {
+    public void deleteById(Long id) {
 
         if (!shopRepository.existsById(id)) {
             throw new ShopNotFoundException();
@@ -39,10 +39,7 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     public Shop getById(Long id) {
-        if (!shopRepository.existsById(id)) {
-            throw new ShopNotFoundException();
-        }
-        return shopRepository.findById(id).get();
+        return shopRepository.findById(id).orElseThrow(ShopNotFoundException::new);
     }
 
     @Override

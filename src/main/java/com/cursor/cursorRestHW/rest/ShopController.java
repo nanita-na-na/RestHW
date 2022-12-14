@@ -25,7 +25,7 @@ public class ShopController {
 
     @DeleteMapping(value = "/shop")
     public void delete(@RequestParam Long id) {
-        shopService.delete(id);
+        shopService.deleteById(id);
     }
 
     @GetMapping(value = "/shop")
